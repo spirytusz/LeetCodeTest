@@ -34,18 +34,6 @@ import java.util.HashMap;
  */
 public class ValidParentheses {
 
-    /*static HashMap<Character, Integer> mapper;
-
-    static {
-        mapper = new HashMap<>();
-        mapper.put('{', 3);
-        mapper.put('[', 2);
-        mapper.put('(', 1);
-        mapper.put(')', -1);
-        mapper.put(']', -2);
-        mapper.put('}', -3);
-    }*/
-
     private static boolean isMatch(char c1, char c2) {
         return (c1 == '{' && c2 == '}') || (c1 == '[' && c2 == ']') || (c1 == '(' && c2 == ')');
     }
