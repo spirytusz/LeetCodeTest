@@ -1,5 +1,6 @@
 /**
  * Link: https://leetcode.com/problems/swap-nodes-in-pairs/
+ * Status: Have no idea
  * <p>
  * Given a linked list, swap every two adjacent nodes and return its head.
  * <p>
@@ -27,73 +28,34 @@ public class SwapNodesInPairs {
         }
     }
 
-    /*public static ListNode swapPairs(ListNode head) {
-        int i = 0;
-        ListNode root = new ListNode(0);
-        ListNode storedRoot = root;
-        ListNode[] tmp = new ListNode[4];
-        while (head != null) {
-            addWithShift(tmp, head, 3 - i);
-            if (i == 3) {
-               root.next = tmp[1];
-               root = root.next;
-               root.next = tmp[0];
-            } else if (i % 2 == 1) {
-                root.next = tmp[2];
-                root = root.next;
-                root.next = tmp[1];
-            }
-            i++;
-            head = head.next;
-        }
-        if(i == 0 || i == 1)
-            return head;
-        else if(i == 2) {
-            root.next = head.next;
-            root = root.next;
-            root.next = head;
-            return storedRoot.next;
-        }
-        return storedRoot.next;
-    }*/
-
     public static ListNode swapPairs(ListNode head) {
-        int i = 0;
-        ListNode root = new ListNode(0);
-        ListNode front = null;
-        while (head != null) {
-            if (i % 2 == 0) {
-                front = head;
-            } else {
-                root.next = head;
-                root = root.next;
-                System.out.print(root+"\t");
-                root.next = front;
-                root = root.next;
-                System.out.print(root+"\t");
+        return swapN(head, 4);
+    }
+
+    private static ListNode swapN(ListNode head, int n) {
+        if (n == 0 || n == 1) {
+            return head;
+        } else {
+            int i = 0;
+            ListNode root = head;
+            ListNode[] frontNode = new ListNode[1];
+            ListNode[] rearNode = new ListNode[1];
+            ListNode[] tempNodes = new ListNode[n];
+            while (head != null) {
+                tempNodes[i % n] = head;
+                if (i % n == n - 1) {
+                    rearNode[0] = tempNodes[n - 1].next;
+                    tempNodes[0].next = rearNode[0];
+                    for(int j = 0;j<n-1;j++)
+                        tempNodes[j+1].next = tempNodes[j];
+                    if(frontNode[0] != null)
+                        frontNode[0].next = tempNodes[n - 1];
+                }
+                i++;
+                head = head.next;
             }
-            i++;
-            head = head.next;
+            return root;
         }
-        return root.next;
-    }
-
-    private static void addWithShift(ListNode[] listNodes, ListNode node, int size) {
-        int start = size > 0 ? size : 0;
-        for (int i = start; i < listNodes.length - 1; i++) {
-            listNodes[i] = listNodes[i + 1];
-        }
-        listNodes[listNodes.length - 1] = node;
-    }
-
-    private static void swap(ListNode pFront, ListNode p, ListNode q, ListNode qRear) {
-        if (pFront != null) {
-            pFront.next = q;
-        }
-        if (q != null) {
-            q.next = p;
-        }
-        p.next = qRear;
     }
 
     public static void main(String[] args) {
@@ -102,6 +64,9 @@ public class SwapNodesInPairs {
         root.next.next = new ListNode(3);
         root.next.next.next = new ListNode(4);
         root.next.next.next.next = new ListNode(5);
+        root.next.next.next.next.next = new ListNode(6);
+        root.next.next.next.next.next.next = new ListNode(7);
+        root.next.next.next.next.next.next.next = new ListNode(8);
         swapPairs(root);
         printList(root);
     }
