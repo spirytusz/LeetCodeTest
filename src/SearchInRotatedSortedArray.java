@@ -1,5 +1,8 @@
 /**
  * Link: https://leetcode.com/problems/search-in-rotated-sorted-array/
+ * Status: AC
+ * Reference: https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/188887/6ms-runtime-beats-100-of-Java-submissions
+ *
  * Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
  * <p>
  * (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
@@ -22,34 +25,37 @@
 public class SearchInRotatedSortedArray {
 
     public static int search(int[] nums, int target) {
-        int low = 0;
-        int high = nums.length - 1;
-        return binarySearch(nums, low, high, target);
-    }
-
-    private static int binarySearch(int[] nums, int low, int high, int target) {
-        if (low < high) {
-            int mid = (low + high) / 2;
-            if (nums[mid] == target) {
-                return mid;
-            } else if (nums[low] <= nums[mid] && nums[mid] <= nums[high]) {
-                if (nums[mid] > target) {
-                    return binarySearch(nums, low, mid, target);
-                } else {
-                    return binarySearch(nums, mid, high, target);
-                }
-            } else if (nums[low] > nums[mid]) {
-                return binarySearch(nums, low + 1, high, target);
-            } else {
-                return binarySearch(nums, mid, high, target);
-            }
-        } else {
+        if (nums == null || nums.length == 0) {
             return -1;
         }
+        int low = 0;
+        int high = nums.length - 1;
+        int mid = low + (high - low) / 2;
+        while (low < high) {
+            if (nums[low] == target)
+                return low;
+            if (nums[mid] == target)
+                return mid;
+            if (nums[high] == target)
+                return high;
+            if (nums[low] < nums[mid]) {
+                if (nums[low] < target && target < nums[mid])
+                    high = mid;
+                else
+                    low = mid + 1;
+            } else {
+                if (nums[mid] < target && target < nums[high])
+                    low = mid + 1;
+                else
+                    high = mid - 1;
+            }
+            mid = low + (high - low) / 2;
+        }
+        return nums[low] == target ? low : -1;
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{4, 5, 6, 7, 0, 1, 2};
-        System.out.println(search(arr, 0));
+        int[] arr = new int[]{8,1,2,3,4,5,6,7};
+        System.out.println(search(arr, 6));
     }
 }
