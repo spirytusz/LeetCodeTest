@@ -2,6 +2,7 @@
  * Link: https://leetcode.com/problems/sudoku-solver/
  * Status: AC
  * Reference: https://leetcode.com/problems/sudoku-solver/discuss/178878/Super-Simple-solution-in-Java
+ *
  * Write a program to solve a Sudoku puzzle by filling the empty cells.
  * <p>
  * A sudoku solution must satisfy all of the following rules:
