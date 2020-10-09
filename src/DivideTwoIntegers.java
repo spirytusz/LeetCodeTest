@@ -1,6 +1,6 @@
 /**
  * Link: https://leetcode.com/problems/divide-two-integers/
- * Status: Have no idea
+ * Status: AC
  * <p>
  * Given two integers dividend and divisor, divide two integers without using multiplication, division and mod operator.
  * <p>
@@ -25,26 +25,46 @@
 public class DivideTwoIntegers {
 
     public static int divide(int dividend, int divisor) {
+        if (dividend == 0) {
+            return 0;
+        }
         if (divisor == 1) {
             return dividend;
-        } else if (divisor == -1) {
+        }
+        if (divisor == -1) {
             if (dividend == Integer.MIN_VALUE) {
                 return Integer.MAX_VALUE;
             } else {
                 return -dividend;
             }
         }
-        int result = 0;
-        String binaryDivisor = Integer.toBinaryString(Math.abs(divisor));
-        for (int i = binaryDivisor.length() - 1; i >= 0; i--) {
-            if (binaryDivisor.charAt(i) == '1') {
-                dividend = dividend >> (binaryDivisor.length() - i - 1);
+        long absDividend = abs(dividend);
+        long absDivisor = abs(divisor);
+        long start = 1;
+        long end = absDividend;
+        while (start < end) {
+            long mid = (start + end) / 2;
+            long midValue = Math.abs(absDividend) - Math.abs(mid * absDivisor);
+            if (midValue == 0) {
+                return (int) ((dividend < 0 || divisor < 0) ? -mid : mid);
+            } else if (midValue > 0) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
             }
         }
-        return dividend * (dividend > 0 && divisor > 0 || dividend < 0 && divisor < 0 ? 1 : -1);
+        int result = (int) Math.min(start, end);
+        if (absDividend - result * absDivisor < 0) {
+            result--;
+        }
+        return (dividend < 0 && divisor < 0) || (dividend > 0 && divisor > 0) ? result : -result;
+    }
+
+    private static long abs(int a) {
+        return Math.abs((long) a);
     }
 
     public static void main(String[] args) {
-
+        System.out.println(divide(10, 3));
     }
 }
