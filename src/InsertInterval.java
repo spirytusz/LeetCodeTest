@@ -5,11 +5,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * Link: https://leetcode.com/problems/insert-interval/
+ * Status: AC
+ *
  * Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
  * <p>
  * You may assume that the intervals were initially sorted according to their start times.
  * <p>
- * Status: AC
  * <p>
  * <p>
  * <p>
