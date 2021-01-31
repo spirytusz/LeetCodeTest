@@ -51,37 +51,36 @@
 public class RegularExpressionMatching {
 
     public static boolean isMatch(String s, String p) {
-        String[] coverts = convert(s, p, '/');
-        String s1 = coverts[0];
-        String p1 = coverts[1];
-        return false;
+        return isMatchInternal(s, p, 0, 0);
     }
 
-    private static String charArrayToString(char[] charArray, char ignore) {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (char c : charArray) {
-            if (c != ignore) {
-                stringBuilder.append(c);
+    private static boolean isMatchInternal(String s, String p, int si, int pi) {
+        if (si == s.length() && pi == p.length()) {
+            return true;
+        } else if (pi == p.length()) {
+            return false;
+        } else if (si == s.length()) {
+            if (pi + 1 < p.length() && p.charAt(pi + 1) == '*') {
+                return isMatchInternal(s, p, si, pi + 2);
+            } else {
+                return false;
+            }
+        } else {
+            if (pi + 1 < p.length() && p.charAt(pi + 1) == '*') {
+                if (s.charAt(si) == p.charAt(pi) || p.charAt(pi) == '.') {
+                    return isMatchInternal(s, p, si, pi + 2) || isMatchInternal(s, p, si + 1, pi);
+                } else {
+                    return isMatchInternal(s, p, si, pi + 2);
+                }
+            } else if (s.charAt(si) == p.charAt(pi) || p.charAt(pi) == '.') {
+                return isMatchInternal(s, p, si + 1, pi + 1);
+            } else {
+                return false;
             }
         }
-        return stringBuilder.toString();
-    }
-
-    private static String[] convert(String s, String p, final char deleteType) {
-        int si = 0;
-        int pj = 0;
-        char[] sCharArray = s.toCharArray();
-        char[] pCharArray = p.toCharArray();
-        while (si < sCharArray.length && pj < pCharArray.length) {
-
-        }
-        String s1 = charArrayToString(sCharArray, deleteType);
-        String p1 = charArrayToString(pCharArray, deleteType);
-        return new String[]{s1, p1};
     }
 
     public static void main(String[] args) {
-        System.out.println("s1 = mississippi\np1 = mis*is*p*.");
-        isMatch("mississippi","mis*is*p*.");
+        System.out.println(isMatch("ab",".*"));
     }
 }
