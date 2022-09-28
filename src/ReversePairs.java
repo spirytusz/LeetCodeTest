@@ -8,7 +8,12 @@ public class ReversePairs {
 
     public int reversePairs(int[] nums) {
         shadow = new int[nums.length];
-        return mergeSort(nums, 0, nums.length - 1);
+        int ret = mergeSort(nums, 0, nums.length - 1);
+        for (int num : nums) {
+            System.out.print(num + "\t");
+        }
+        System.out.println();
+        return ret;
     }
 
     private int mergeSort(int[] nums, int start, int end) {
