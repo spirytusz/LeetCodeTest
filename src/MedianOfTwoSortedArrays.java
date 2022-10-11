@@ -23,50 +23,41 @@
  */
 public class MedianOfTwoSortedArrays {
 
-    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        int m = nums1.length;
-        int n = nums2.length;
-        if(m == 0) {
-            return findMedianSortedArray(nums2);
-        }
-        if(n == 0) {
-            return findMedianSortedArray(nums1);
-        }
-        int[] mergeArray = new int[m + n];
-        int i = 0;
-        int j = 0;
-        for (int index = 0; index < mergeArray.length; index++) {
-            int temp = 0;
-            if(i < m && j< n) {
-                if(nums1[i] <= nums2[j]) {
-                    temp = nums1[i];
-                    i++;
-                } else {
-                    temp = nums2[j];
-                    j++;
-                }
-                mergeArray[index] = temp;
-            } else if(i < m){
-                mergeArray[index] = nums1[i++];
-            } else if(j < n) {
-                mergeArray[index] = nums2[j++];
-            }
-        }
-        return findMedianSortedArray(mergeArray);
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int len1 = nums1.length;
+        int len2 = nums2.length;
+
+        int leftIndex = (len1 + len2 + 1) / 2;
+        int rightIndex = (len1 + len2 + 2) / 2;
+        int left = getKthElement(nums1, nums2, 0, 0, leftIndex);
+        int right = getKthElement(nums1, nums2, 0, 0, rightIndex);
+        return (left + right) / 2.0;
     }
 
-    private static double findMedianSortedArray(int[] nums) {
-        int length = nums.length;
-        if (length % 2 == 1) {
-            return nums[(length - 1) / 2];
+    private int getKthElement(int[] a, int[] b, int aStart, int bStart, int k) {
+        if (aStart >= a.length) {
+            return b[bStart + k - 1];
+        }
+        if (bStart >= b.length) {
+            return a[aStart + k - 1];
+        }
+        if (k == 1) {
+            return Math.min(a[aStart], b[bStart]);
+        }
+
+        int aMid = aStart + k / 2 - 1 < a.length ? a[aStart + k / 2 - 1] : Integer.MAX_VALUE;
+        int bMid = bStart + k / 2 - 1 < b.length ? b[bStart + k / 2 - 1] : Integer.MAX_VALUE;
+
+        if (aMid < bMid) {
+            return getKthElement(a, b, aStart + k / 2, bStart, k - k / 2);
         } else {
-            return (double)(nums[length / 2] + nums[length / 2 - 1]) / 2;
+            return getKthElement(a, b, aStart, bStart + k / 2, k - k / 2);
         }
     }
 
     public static void main(String[] args) {
-        int[] arr1 = {1};
-        int[] arr2 = {};
-        System.out.println(findMedianSortedArrays(arr1, arr2));
+        int[] arr1 = {1, 3};
+        int[] arr2 = {2, 3};
+        System.out.println(new MedianOfTwoSortedArrays().findMedianSortedArrays(arr1, arr2));
     }
 }
