@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Link: https://leetcode.com/problems/combination-sum/
@@ -36,42 +34,45 @@ import java.util.List;
 public class CombinationSum {
 
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
-        int depth = getDepth(candidates, target);
-        List<List<Integer>> result = new ArrayList<>();
-        storeCombinationSum(result, new ArrayList<>(), candidates, target, depth);
-        return result;
+        Set<List<Integer>> result = new HashSet<>();
+        combinationSumImpl(candidates, result, new ArrayList<>(), target, getDepth(candidates, target));
+        return new ArrayList<>(result);
     }
 
-    private static void storeCombinationSum(List<List<Integer>> result, List<Integer> item, int[] candidates, int target, int depth) {
-        if (depth >= 0) {
-            if (target == 0) {
-                List<Integer> maybeResultItem = new ArrayList<>(item);
-                Collections.sort(maybeResultItem);
-                if (!result.contains(maybeResultItem)) {
-                    result.add(maybeResultItem);
-                }
-            } else if (target > 0) {
-                for (int i = 0; i < candidates.length; i++) {
-                    item.add(candidates[i]);
-                    storeCombinationSum(result, item, candidates, target - candidates[i], depth - 1);
-                    item.remove(item.size() - 1);
-                }
+    private static void combinationSumImpl(int[] candidates, Set<List<Integer>> result, List<Integer> item, int target, int depth) {
+        if (depth < 0) {
+            return;
+        }
+        if (target == 0) {
+            List<Integer> temp = new ArrayList<>(item);
+            Collections.sort(temp);
+            result.add(temp);
+            return;
+        }
+        for (Integer candidate : candidates) {
+            int newTarget = target - candidate;
+            if (newTarget < 0) {
+                continue;
+            }
+            item.add(candidate);
+            combinationSumImpl(candidates, result, item, newTarget, depth - 1);
+            item.remove(candidate);
+        }
+    }
+
+    private static int getDepth(int[] candidates, int target) {
+        int min = Integer.MAX_VALUE;
+        for (int candidate : candidates) {
+            if (min > candidate) {
+                min = candidate;
             }
         }
-    }
-
-    private static int getDepth(int[] arr, int target) {
-        int smallest = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (smallest > arr[i])
-                smallest = arr[i];
-        }
-        return target / smallest;
+        return target / min;
     }
 
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
-        List<List<Integer>> result = combinationSum(new int[]{4, 2, 7, 5, 6}, 16);
+        List<List<Integer>> result = combinationSum(new int[]{2,3,6,7}, 7);
         System.out.println(result + "\n" + (System.currentTimeMillis() - start) + "ms");
     }
 }
