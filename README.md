@@ -8,3 +8,4 @@
 | 22  |                  [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description)                   |              [GenerateParentheses.java](src/GenerateParentheses.java)              |
 | 39  |                       [Combination Sum](https://leetcode.com/problems/combination-sum/description)                        |                   [CombinationSum.java](src/CombinationSum.java)                   |
 | 46  |                          [Permutations](https://leetcode.com/problems/permutations/description/)                          |                     [Permutations.java](src/Permutations.java)                     |
+|  2  |                       [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/description/)                       |                    [AddTwoNumbers.java](src/AddTwoNumbers.java)                    |
