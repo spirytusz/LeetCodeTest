@@ -7,3 +7,4 @@
 | 17  | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/) | [LetterCombinationsOfAPhoneNumber.java](src/LetterCombinationsOfAPhoneNumber.java) |
 | 22  |                  [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description)                   |              [GenerateParentheses.java](src/GenerateParentheses.java)              |
 | 39  |                       [Combination Sum](https://leetcode.com/problems/combination-sum/description)                        |                   [CombinationSum.java](src/CombinationSum.java)                   |
+| 46  |                          [Permutations](https://leetcode.com/problems/permutations/description/)                          |                     [Permutations.java](src/Permutations.java)                     |
