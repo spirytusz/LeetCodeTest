@@ -10,3 +10,4 @@
 | 46  |                          [Permutations](https://leetcode.com/problems/permutations/description/)                          |                     [Permutations.java](src/Permutations.java)                     |
 |  2  |                       [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/description/)                       |                    [AddTwoNumbers.java](src/AddTwoNumbers.java)                    |
 | 94  |         [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)         |       [BinaryTreeInorderTraversal.java](src/BinaryTreeInorderTraversal.java)       |
+| 101 |                              [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)                              |                    [SymmetricTree.java](src/SymmetricTree.java)                    |
