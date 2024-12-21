@@ -12,3 +12,4 @@
 | 94  |         [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)         |       [BinaryTreeInorderTraversal.java](src/BinaryTreeInorderTraversal.java)       |
 | 101 |                              [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)                              |                    [SymmetricTree.java](src/SymmetricTree.java)                    |
 | 114 |    [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/)    |      [FlattenBinaryTreeToLinkedList](src/FlattenBinaryTreeToLinkedList.java)       |
+| 98  |           [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/description/)           |         [ValidateBinarySearchTree.java](src/ValidateBinarySearchTree.java)         |
