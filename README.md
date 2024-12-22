@@ -14,3 +14,4 @@
 | 114 |    [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/)    |      [FlattenBinaryTreeToLinkedList](src/FlattenBinaryTreeToLinkedList.java)       |
 | 98  |           [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/description/)           |         [ValidateBinarySearchTree.java](src/ValidateBinarySearchTree.java)         |
 |  5  |        [Longest Palindromic Substring ](https://leetcode.com/problems/longest-palindromic-substring/description/)         |      [LongestPalindromicSubstring.java](src/LongestPalindromicSubstring.java)      |
+| 152 |             [Maximum Product Subarray ](https://leetcode.com/problems/maximum-product-subarray/description/)              |           [MaximumProductSubarray.java](src/MaximumProductSubarray.java)           |
