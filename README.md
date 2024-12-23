@@ -15,3 +15,4 @@
 | 98  |           [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/description/)           |         [ValidateBinarySearchTree.java](src/ValidateBinarySearchTree.java)         |
 |  5  |        [Longest Palindromic Substring ](https://leetcode.com/problems/longest-palindromic-substring/description/)         |      [LongestPalindromicSubstring.java](src/LongestPalindromicSubstring.java)      |
 | 152 |             [Maximum Product Subarray ](https://leetcode.com/problems/maximum-product-subarray/description/)              |           [MaximumProductSubarray.java](src/MaximumProductSubarray.java)           |
+| 300 |        [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description)         |     [LongestIncreasingSubsequence.java](src/LongestIncreasingSubsequence.java)     |
