@@ -18,3 +18,4 @@
 | 300 |        [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description)         |     [LongestIncreasingSubsequence.java](src/LongestIncreasingSubsequence.java)     |
 | 102 |           [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)           |    [BinaryTreeLevelOrderTraversal.java](src/BinaryTreeLevelOrderTraversal.java)    |
 | 543 |                     [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)                     |             [DiameterOfBinaryTree.java](src/DiameterOfBinaryTree.java)             |
+| 74  |                          [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)                          |                  [SearchA2DMatrix.java](src/SearchA2DMatrix.java)                  |
