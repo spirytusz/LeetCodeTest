@@ -20,3 +20,4 @@
 | 543 |                     [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)                     |             [DiameterOfBinaryTree.java](src/DiameterOfBinaryTree.java)             |
 | 74  |                          [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)                          |                  [SearchA2DMatrix.java](src/SearchA2DMatrix.java)                  |
 | 124 |          [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/description)           |         [BinaryTreeMaximumPathSum.java](src/BinaryTreeMaximumPathSum.java)         |
+| 118 |                           [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)                            |                   [PascalTriangle.java](src/PascalTriangle.java)                   |
