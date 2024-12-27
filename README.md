@@ -23,3 +23,4 @@
 | 118 |                           [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)                            |                   [PascalTriangle.java](src/PascalTriangle.java)                   |
 | 51  |                              [N-Queens](https://leetcode.com/problems/n-queens/description/)                              |                          [NQueens.java](src/NQueens.java)                          |
 | 78  |                               [Subsets](https://leetcode.com/problems/subsets/description/)                               |                          [Subsets.java](src/Subsets.java)                          |
+| 131 |               [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/description/)               |           [PalindromePartitioning.java](src/PalindromePartitioning.java)           |
