@@ -25,3 +25,4 @@
 | 78  |                               [Subsets](https://leetcode.com/problems/subsets/description/)                               |                          [Subsets.java](src/Subsets.java)                          |
 | 131 |               [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/description/)               |           [PalindromePartitioning.java](src/PalindromePartitioning.java)           |
 | 153 |  [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/)  |  [FindMinimumInRotatedSortedArray.java](src/FindMinimumInRotatedSortedArray.java)  |
+| 169 |                      [Majority Element](https://leetcode.com/problems/majority-element/description)                       |                  [MajorityElement.java](src/MajorityElement.java)                  |
