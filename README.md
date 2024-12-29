@@ -28,3 +28,4 @@
 | 169 |                      [Majority Element](https://leetcode.com/problems/majority-element/description)                       |                  [MajorityElement.java](src/MajorityElement.java)                  |
 | 189 |                          [Rotate Array](https://leetcode.com/problems/rotate-array/description/)                          |                      [RotateArray.java](src/RotateArray.java)                      |
 | 136 |                               [Single Number](https://leetcode.com/problems/single-number/)                               |                     [SingleNumber.java](src/SingleNumber.java)                     |
+| 121 |       [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)       |        [BestTimeToBuyAndSellStock.java](src/BestTimeToBuyAndSellStock.java)        |
