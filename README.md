@@ -33,3 +33,4 @@
 | 108 | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/) | [ConvertSortedArrayToBinarySearchTree.java](src/ConvertSortedArrayToBinarySearchTree.java) |
 | 70  |                            [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)                            |                       [ClimbingStairs.java](src/ClimbingStairs.java)                       |
 | 994 |                                  [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)                                  |                       [RottingOranges.java](src/RottingOranges.java)                       |
+| 207 |                            [Course Schedule](https://leetcode.com/problems/course-schedule/description/)                            |                       [CourseSchedule.java](src/CourseSchedule.java)                       |
