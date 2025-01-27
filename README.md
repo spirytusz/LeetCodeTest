@@ -36,3 +36,4 @@
 | 207 |                            [Course Schedule](https://leetcode.com/problems/course-schedule/description/)                            |                       [CourseSchedule.java](src/CourseSchedule.java)                       |
 | 238 |                     [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)                     |                    [ProductExceptSelf.java](src/ProductExceptSelf.java)                    |
 | 287 |                  [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description)                   |                  [FindDuplicateNumber.java](src/FindDuplicateNumber.java)                  |
+| 24  |                        [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/description/)                        |                     [SwapNodesInPairs.java](src/SwapNodesInPairs.java)                     |
