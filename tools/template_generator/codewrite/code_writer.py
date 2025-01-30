@@ -9,3 +9,4 @@ def writeCode(path: str, fileName: str, codeType: str, content: str):
     f.write(content)
     f.flush()
     f.close()
+    return path + '/' + fileName + '.java'
