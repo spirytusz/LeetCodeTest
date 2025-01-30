@@ -1,0 +1,6 @@
+source tools/.venv/bin/activate
+
+echo "The provided URL is: $url"
+python3 tools/template_generator/main.py url $1
+
+deactivate
