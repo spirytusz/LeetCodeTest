@@ -1,7 +1,7 @@
 import re
 import os
 
-MD_CODE_TEMPLATE = '''| {questionId} | [{questionTitle}]({questionUrl}) | [{solutionFileName}]({solutionFileRelativePath})'''
+MD_CODE_TEMPLATE = '''| {questionId} | [{questionTitle}]({questionUrl}) | [{solutionFileName}]({solutionFileRelativePath}) |'''
 
 
 def editMd(mdFilePath: str, questionId: str, questionTitle: str, questionUrl: str, solutionFilePath):
