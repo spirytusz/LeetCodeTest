@@ -43,4 +43,5 @@
 | 560 |       [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/?envType=study-plan-v2&envId=top-100-liked)       |                   [SubarraySumEqualsK.java](src/SubarraySumEqualsK.java)                   |
 | 226 |    [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/?envType=study-plan-v2&envId=top-100-liked)    |                     [InvertBinaryTree.java](src/InvertBinaryTree.java)                     |
 | 437 |          [Path Sum III](https://leetcode.com/problems/path-sum-iii/description/?envType=study-plan-v2&envId=top-100-liked)          |                           [PathSumIii.java](src/PathSumIii.java)                           |
-| 139 | [Word Break](https://leetcode.com/problems/word-break/?envType=study-plan-v2&envId=top-100-liked) | [WordBreak.java](src/WordBreak.java) |
+| 139 |                  [Word Break](https://leetcode.com/problems/word-break/?envType=study-plan-v2&envId=top-100-liked)                  |                            [WordBreak.java](src/WordBreak.java)                            |
+| 198 |          [House Robber](https://leetcode.com/problems/house-robber/description/?envType=study-plan-v2&envId=top-100-liked)          |                          [HouseRobber.java](src/HouseRobber.java)                          |
