@@ -47,3 +47,4 @@
 | 198 |          [House Robber](https://leetcode.com/problems/house-robber/description/?envType=study-plan-v2&envId=top-100-liked)          |                          [HouseRobber.java](src/HouseRobber.java)                          |
 | 146 |                                  [LRU Cache](https://leetcode.com/problems/lru-cache/description/)                                  |                             [LruCache.java](src/LruCache.java)                             |
 | 279 |             [Perfect Squares](https://leetcode.com/problems/perfect-squares/?envType=study-plan-v2&envId=top-100-liked)             |                       [PerfectSquares.java](src/PerfectSquares.java)                       |
+| 322 | [Coin Change](https://leetcode.com/problems/coin-change/?envType=study-plan-v2&envId=top-100-liked) | [CoinChange.java](src/CoinChange.java) |
