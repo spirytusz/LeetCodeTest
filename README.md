@@ -50,3 +50,4 @@
 | 322  |                 [Coin Change](https://leetcode.com/problems/coin-change/?envType=study-plan-v2&envId=top-100-liked)                 |                           [CoinChange.java](src/CoinChange.java)                           |
 | 1250 |  [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/?envType=study-plan-v2&envId=top-100-liked)  |             [LongestCommonSubsequence.java](src/LongestCommonSubsequence.java)             |
 | 148  |             [Sort List](https://leetcode.com/problems/sort-list/description/?envType=study-plan-v2&envId=top-100-liked)             |                             [SortList.java](src/SortList.java)                             |
+| 206  |   [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/?envType=study-plan-v2&envId=top-100-liked)   |                    [ReverseLinkedList.java](src/ReverseLinkedList.java)                    |
