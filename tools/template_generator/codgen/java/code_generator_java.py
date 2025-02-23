@@ -56,9 +56,9 @@ def genJavaCode(url: str, questionId: str, questionTitle: str, questionContent: 
     className = questionTitle.title().replace(' ', '')
 
     dataStructureDeclare = ''
-    if 'public class TreeNode' in code:
+    if re.compile('(public )?class TreeNode').search(code):
         dataStructureDeclare += '\n' + TREE_NODE_DECLARE
-    if 'public class ListNode' in code:
+    if re.compile('(public )?class ListNode').search(code):
         dataStructureDeclare += '\n' + LIST_NODE_DECLARE
 
     solutionMethodDeclare = '\n' + INDENT + re.findall('(public .* .*\(.*\) {)', code)[0].replace('public', 'public static') + '\n' + INDENT + '}'
