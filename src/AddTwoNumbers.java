@@ -33,56 +33,35 @@ public class AddTwoNumbers {
     }
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode root = null;
-        ListNode pointer = null;
-        int overBit = 0;
-        while (l1 != null || l2 != null) {
-            int val1;
-            int val2;
-            if (l1 == null) {
-                val1 = 0;
-            } else {
-                val1 = l1.val;
-                l1 = l1.next;
-            }
-            if (l2 == null) {
-                val2 = 0;
-            } else {
-                val2 = l2.val;
-                l2 = l2.next;
-            }
-            int bit = val1 + val2 + overBit;
-            if (bit >= 10) {
-                bit %= 10;
-                overBit = 1;
-            } else {
-                overBit = 0;
-            }
-            ListNode node = new ListNode(bit);
-            if(root == null) {
-                root = node;
-                pointer = node;
-            } else {
-                pointer.next = node;
-                pointer = pointer.next;
-            }
+        if (l1 == null && l2 == null) {
+            return null;
         }
-        if(overBit != 0) {
-            ListNode node = new ListNode(overBit);
-            pointer.next = node;
+        ListNode head = new ListNode(0);
+        addTwoNumbersImpl(head, l1, l2, 0);
+        return head.next;
+    }
+
+    private static void addTwoNumbersImpl(ListNode current, ListNode l1, ListNode l2, int shift) {
+        if (l1 == null && l2 == null) {
+            if (shift > 0) {
+                current.next = new ListNode(shift);
+            }
+            return;
         }
-        return root;
+        int resultDigit = (l1 != null ? l1.val : 0) + (l2 != null ? l2.val : 0) + shift;
+        current.next = new ListNode(resultDigit % 10);
+        addTwoNumbersImpl(current.next, l1 != null ? l1.next : null, l2 != null ? l2.next : null, resultDigit / 10);
     }
 
     public static void main(String[] args) {
         ListNode l1 = new ListNode(5);
         ListNode l2 = new ListNode(5);
-        /*l1.next = new ListNode(4);
+        l1.next = new ListNode(4);
         l1.next.next = new ListNode(3);
         l2.next = new ListNode(6);
-        l2.next.next = new ListNode(4);*/
+        l2.next.next = new ListNode(4);
         ListNode node = addTwoNumbers(l1, l2);
-        while(node != null) {
+        while (node != null) {
             System.out.print(node.val);
             node = node.next;
         }
