@@ -59,3 +59,4 @@
 | 240  |                [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/description/?envType=study-plan-v2&envId=top-100-liked)                |                                  [SearchA2DMatrixIi.java](src/SearchA2DMatrixIi.java)                                  |
 |  43  |                                          [Multiply Strings](https://leetcode.com/problems/multiply-strings/description/)                                          |                                    [MultiplyStrings.java](src/MultiplyStrings.java)                                    |
 | 211 | [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | [DesignAddAndSearchWordsDataStructure.java](src/DesignAddAndSearchWordsDataStructure.java) |
+| 112 | [Path Sum](https://leetcode.com/problems/path-sum/description/) | [PathSum.java](src/PathSum.java) |
