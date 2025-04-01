@@ -60,3 +60,4 @@
 |  43  |                                          [Multiply Strings](https://leetcode.com/problems/multiply-strings/description/)                                          |                                    [MultiplyStrings.java](src/MultiplyStrings.java)                                    |
 | 211 | [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | [DesignAddAndSearchWordsDataStructure.java](src/DesignAddAndSearchWordsDataStructure.java) |
 | 112 | [Path Sum](https://leetcode.com/problems/path-sum/description/) | [PathSum.java](src/PathSum.java) |
+| 111 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/description/) | [MinimumDepthOfBinaryTree.java](src/MinimumDepthOfBinaryTree.java) |
